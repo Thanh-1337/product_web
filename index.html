@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cửa Hàng Công Nghệ TechStore</title>
+    <link rel="stylesheet" href="style.css?v=1.1" />
+  </head>
+  <body>
+    <!-- Header & Bộ lọc tìm kiếm -->
+    <header>
+      <div class="container">
+        <h1>TechStore</h1>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Tìm kiếm sản phẩm công nghệ..."
+          />
+        </div>
+
+        <div class="header-actions">
+          <div class="cart-trigger" id="cartTrigger">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-badge" id="cartBadge">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-content">
+        <span class="hero-tag">Bộ Sưu Tập Mới 2026</span>
+        <h1>Khám Phá Công Nghệ Đỉnh Cao</h1>
+        <p>Trải nghiệm các thiết bị công nghệ chính hãng với ưu đãi tốt nhất.</p>
+      </div>
+    </section>
+
+    <!-- Bộ lọc & Sắp xếp -->
+    <section class="filter-section">
+      <div class="container filter-wrapper">
+        <!-- Category Tabs -->
+        <div class="category-tabs" id="categoryTabs">
+        <button class="tab-btn active" data-value="all">
+            <i class="fa-solid fa-grid-2"></i> Tất cả
+          </button>
+          <button class="tab-btn" data-value="laptop">
+            <i class="fa-solid fa-laptop"></i> Laptop
+          </button>
+          <button class="tab-btn" data-value="phone">
+            <i class="fa-solid fa-mobile-screen-button"></i> Điện thoại
+          </button>
+          <button class="tab-btn" data-value="accessory">
+            <i class="fa-solid fa-keyboard"></i> Phụ kiện
+          </button>
+        </div>
+
+        <!-- Các bộ lọc ẩn/hiện hoặc đồng bộ -->
+        <div class="filter-controls">
+          <!-- Giữ nguyên filterSelect để giữ chức năng yêu cầu -->
+          <div class="select-wrapper">
+          <select id="filterSelect">
+            <option value="all">Tất cả danh mục</option>
+            <option value="laptop">Laptop</option>
+            <option value="phone">Điện thoại</option>
+            <option value="accessory">Phụ kiện</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Khối hiển thị sản phẩm -->
+    <main class="container">
+      <h2 class="section-title">Danh Sách Sản Phẩm Nổi Bật</h2>
+      <div class="product-grid" id="productGrid">
+        <!-- Dữ liệu sản phẩm sẽ được JavaScript tự động render vào đây -->
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 TechStore - Bài thực hành xây dựng Website danh sách sản
+        phẩm.
+      </p>
+    </footer>
+
+    <script src="style.js"></script>
+  </body>
+</html>
