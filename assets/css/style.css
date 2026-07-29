@@ -246,6 +246,7 @@ header h1 {
 
 /* Product Card Custom */
 .product-card {
+  position: relative;
   background-color: var(--card-bg);
   border-radius: 20px;
   overflow: hidden;
@@ -369,14 +370,11 @@ footer {
   color: #64748b;
   border-top: 1px solid #1e293b;
 }
-.product-card {
-  position: relative;
-}
 .badge-sale {
   position: absolute;
   top: 0.85rem;
   left: 0.85rem;
-  z-index: 2;
+  z-index: 10;
   padding: 0.35rem 0.7rem;
   font-size: 0.75rem;
   font-weight: 600;
