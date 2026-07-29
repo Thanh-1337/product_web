@@ -24,6 +24,14 @@
     <!-- 2. BREADCRUMB / BANNER ĐẦU TRANG -->
     <section class="py-5 text-center position-relative overflow-hidden" style="background: var(--primary-gradient);">
       <div class="container py-4 position-relative" style="z-index: 2;">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center mb-3">
+          <ol class="breadcrumb bg-white bg-opacity-10 px-3 py-1.5 rounded-pill mb-0">
+            <li class="breadcrumb-item"><a href="index.html" class="text-white-50 text-decoration-none fw-medium"><i class="fa-solid fa-house me-1"></i>Trang chủ</a></li>
+            <li class="breadcrumb-item active text-white fw-semibold" aria-current="page">Giới thiệu</li>
+          </ol>
+        </nav>
+
         <span class="badge bg-white bg-opacity-20 text-white fw-bold text-uppercase px-3 py-2 rounded-pill mb-3 tracking-wider">
           <i class="fa-solid fa-star me-1"></i> Thương Hiệu Hàng Đầu
         </span>
@@ -36,7 +44,8 @@
 
     <!-- 3. NỘI DUNG GIỚI THIỆU CHÍNH -->
     <main class="container my-5 flex-grow-1">
-      <!-- Câu chuyện thương hiệu -->
+
+      <!-- SECTION 3.1: CÂU CHUYỆN THƯƠNG HIỆU & SỨ MỆNH -->
       <div class="row align-items-center g-5 mb-5">
         <div class="col-lg-6">
           <span
@@ -55,26 +64,40 @@
             với mức giá cạnh tranh nhất cùng dịch vụ hậu mãi chu đáo, tận tâm.
           </p>
 
-          <!-- Thống kê ấn tượng -->
-          <div class="row g-3 text-center">
-            <div class="col-4">
-              <div class="p-3.5 bg-white rounded-4 shadow-sm border h-100">
-                <h3 class="fw-bold text-primary mb-1">5+</h3>
-                <span class="text-muted fs-7">Năm Kinh Nghiệm</span>
+          <!-- Danh sách cam kết trực quan -->
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-primary fs-5"></i>
+                <span class="fw-semibold text-dark fs-7">Sản phẩm 100% Chính Hãng</span>
               </div>
             </div>
-            <div class="col-4">
-              <div class="p-3.5 bg-white rounded-4 shadow-sm border h-100">
-                <h3 class="fw-bold text-primary mb-1">50K+</h3>
-                <span class="text-muted fs-7">Khách Tin Dùng</span>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-primary fs-5"></i>
+                <span class="fw-semibold text-dark fs-7">Bảo hành 1 đổi 1 nhanh chóng</span>
               </div>
             </div>
-            <div class="col-4">
-              <div class="p-3.5 bg-white rounded-4 shadow-sm border h-100">
-                <h3 class="fw-bold text-primary mb-1">100%</h3>
-                <span class="text-muted fs-7">Hàng Chính Hãng</span>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-primary fs-5"></i>
+                <span class="fw-semibold text-dark fs-7">Hỗ trợ kỹ thuật trọn đời</span>
               </div>
             </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-primary fs-5"></i>
+                <span class="fw-semibold text-dark fs-7">Giao hàng thần tốc 2h</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trích dẫn triết lý -->
+          <div class="p-3.5 border-start border-4 border-primary bg-white rounded-3 shadow-sm">
+            <p class="fst-italic text-secondary m-0 small">
+              "Khách hàng không chỉ mua một sản phẩm công nghệ, khách hàng gửi gắm niềm tin vào dịch vụ và sự uy tín của chúng tôi."
+            </p>
+            <span class="fw-bold text-dark fs-8 d-block mt-1">— CEO TechStore</span>
           </div>
         </div>
 
@@ -83,29 +106,81 @@
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
               alt="Đội ngũ TechStore"
-              class="img-fluid rounded-5 shadow-lg border"
+              class="img-fluid rounded-5 shadow-lg border w-100"
             />
+            <div class="position-absolute bottom-0 start-0 m-4 bg-white p-3 rounded-4 shadow border d-none d-sm-block">
+              <div class="d-flex align-items-center gap-3">
+                <div class="bg-success bg-opacity-10 text-success p-3 rounded-circle">
+                  <i class="fa-solid fa-award fs-3"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold text-dark mb-0">Top 10 Cửa Hàng Uy Tín</h6>
+                  <span class="text-muted fs-8">Bình chọn bởi người tiêu dùng 2025</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Giá trị cốt lõi -->
-      <div class="pt-5 border-top">
+      <!-- SECTION 3.2: THỐNG KÊ ẤN TƯỢNG (EXPANDED STATS) -->
+      <section class="my-5 py-4 bg-white rounded-5 shadow-sm border px-4">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <i class="fa-solid fa-calendar-days fs-5"></i>
+              </div>
+              <h3 class="fw-bold text-primary mb-1 display-6 fs-3">5+</h3>
+              <span class="text-muted fs-7 fw-semibold">Năm Phát Triển</span>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <div class="icon-box bg-success bg-opacity-10 text-success rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <i class="fa-solid fa-users fs-5"></i>
+              </div>
+              <h3 class="fw-bold text-success mb-1 display-6 fs-3">50K+</h3>
+              <span class="text-muted fs-7 fw-semibold">Khách Hàng Tin Dùng</span>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <div class="icon-box bg-warning bg-opacity-10 text-warning rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <i class="fa-solid fa-shield-check fs-5"></i>
+              </div>
+              <h3 class="fw-bold text-warning mb-1 display-6 fs-3">100%</h3>
+              <span class="text-muted fs-7 fw-semibold">Hàng Chính Hãng</span>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <div class="icon-box bg-danger bg-opacity-10 text-danger rounded-circle mx-auto mb-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                <i class="fa-solid fa-face-smile fs-5"></i>
+              </div>
+              <h3 class="fw-bold text-danger mb-1 display-6 fs-3">99.8%</h3>
+              <span class="text-muted fs-7 fw-semibold">Hài Lòng Dịch Vụ</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3.3: GIÁ TRỊ CỐT LÕI (CORE VALUES GRID - 6 CARDS) -->
+      <div class="pt-4 my-5">
         <div class="text-center mb-5">
           <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-3 py-2 rounded-pill mb-2 tracking-wider">Cam Kết Hàng Đầu</span>
           <h3 class="fw-bold text-dark display-6 fs-3">Giá Trị Cốt Lõi Của Chúng Tôi</h3>
+          <p class="text-secondary col-md-6 mx-auto small">TechStore vận hành dựa trên sự minh bạch, chất lượng đỉnh cao và sự hài lòng tuyệt đối từ phía khách hàng.</p>
         </div>
         
         <div class="row g-4">
           <!-- Thẻ 1 -->
           <div class="col-md-4">
-            <div
-              class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white"
-            >
-              <div
-                class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
-                style="width: 64px; height: 64px"
-              >
+            <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white transition-bounce">
+              <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px">
                 <i class="fa-solid fa-shield-halved fs-3"></i>
               </div>
               <h5 class="fw-bold mb-2 text-dark">Chất Lượng Cam Kết</h5>
@@ -117,13 +192,8 @@
 
           <!-- Thẻ 2 -->
           <div class="col-md-4">
-            <div
-              class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white"
-            >
-              <div
-                class="icon-box bg-success bg-opacity-10 text-success rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
-                style="width: 64px; height: 64px"
-              >
+            <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white transition-bounce">
+              <div class="icon-box bg-success bg-opacity-10 text-success rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px">
                 <i class="fa-solid fa-truck-fast fs-3"></i>
               </div>
               <h5 class="fw-bold mb-2 text-dark">Giao Hàng Tốc Độ</h5>
@@ -135,13 +205,8 @@
 
           <!-- Thẻ 3 -->
           <div class="col-md-4">
-            <div
-              class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white"
-            >
-              <div
-                class="icon-box bg-warning bg-opacity-10 text-warning rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
-                style="width: 64px; height: 64px"
-              >
+            <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white transition-bounce">
+              <div class="icon-box bg-warning bg-opacity-10 text-warning rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px">
                 <i class="fa-solid fa-headset fs-3"></i>
               </div>
               <h5 class="fw-bold mb-2 text-dark">Tận Tâm Phục Vụ</h5>
@@ -150,8 +215,201 @@
               </p>
             </div>
           </div>
+
+          <!-- Thẻ 4 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white transition-bounce">
+              <div class="icon-box bg-danger bg-opacity-10 text-danger rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px">
+                <i class="fa-solid fa-rotate-left fs-3"></i>
+              </div>
+              <h5 class="fw-bold mb-2 text-dark">Dễ Dàng Đổi Trả</h5>
+              <p class="text-muted small m-0 lh-base">
+                Chính sách đổi trả trong vòng 30 ngày linh hoạt nếu phát sinh lỗi từ nhà sản xuất, thủ tục đơn giản và minh bạch.
+              </p>
+            </div>
+          </div>
+
+          <!-- Thẻ 5 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white transition-bounce">
+              <div class="icon-box bg-info bg-opacity-10 text-info rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px">
+                <i class="fa-solid fa-credit-card fs-3"></i>
+              </div>
+              <h5 class="fw-bold mb-2 text-dark">Trả Góp 0% Lãi Suất</h5>
+              <p class="text-muted small m-0 lh-base">
+                Hỗ trợ trả góp 0% lãi suất qua thẻ tín dụng hoặc công ty tài chính, duyệt hồ sơ nhanh gọn trong 15 phút.
+              </p>
+            </div>
+          </div>
+
+          <!-- Thẻ 6 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white transition-bounce">
+              <div class="icon-box bg-secondary bg-opacity-10 text-secondary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px">
+                <i class="fa-solid fa-screwdriver-wrench fs-3"></i>
+              </div>
+              <h5 class="fw-bold mb-2 text-dark">Bảo Hành Chuyên Nghiệp</h5>
+              <p class="text-muted small m-0 lh-base">
+                Trung tâm bảo hành ủy quyền hỗ trợ xử lý sự cố kỹ thuật chuyên sâu với linh kiện thay thế chính hãng.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- SECTION 3.4: HÀNH TRÌNH PHÁT TRIỂN (MILESTONE TIMELINE) -->
+      <section class="my-5 py-5 border-top border-bottom">
+        <div class="text-center mb-5">
+          <span class="badge bg-success-subtle text-success fw-bold text-uppercase px-3 py-2 rounded-pill mb-2 tracking-wider">Chặng Đường Đã Qua</span>
+          <h3 class="fw-bold text-dark fs-3">Hành Trình Phát Triển Của TechStore</h3>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="p-4 bg-white rounded-4 shadow-sm border h-100 border-top border-4 border-primary">
+              <span class="badge bg-primary text-white fw-bold mb-2">Năm 2020</span>
+              <h6 class="fw-bold text-dark mb-2">Thành Lập Cửa Hàng Đầu Tiên</h6>
+              <p class="text-muted small m-0">Khởi đầu với một cửa hàng nhỏ chuyên kinh doanh phụ kiện công nghệ chính hãng tại TP.HCM.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="p-4 bg-white rounded-4 shadow-sm border h-100 border-top border-4 border-success">
+              <span class="badge bg-success text-white fw-bold mb-2">Năm 2022</span>
+              <h6 class="fw-bold text-dark mb-2">Mở Rộng Hệ Thống Showroom</h6>
+              <p class="text-muted small m-0">Khai trương thêm 5 chi nhánh tại Hà Nội & Đà Nẵng, mở rộng sang phân phối Laptop & Smartphone.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="p-4 bg-white rounded-4 shadow-sm border h-100 border-top border-4 border-warning">
+              <span class="badge bg-warning text-dark fw-bold mb-2">Năm 2024</span>
+              <h6 class="fw-bold text-dark mb-2">Chuyển Đổi Số & E-Commerce</h6>
+              <p class="text-muted small m-0">Đạt cột mốc 50,000 đơn hàng trực tuyến, xây dựng hệ thống website thương mại điện tử hiện đại.</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="p-4 bg-white rounded-4 shadow-sm border h-100 border-top border-4 border-danger">
+              <span class="badge bg-danger text-white fw-bold mb-2">Năm 2026</span>
+              <h6 class="fw-bold text-dark mb-2">Hệ Thống Bán Lẻ Uy Tín</h6>
+              <p class="text-muted small m-0">Trở thành đối tác phân phối ủy quyền của Apple, Samsung, Asus, Dell cùng hàng loạt thương hiệu lớn.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3.5: ĐỘI NGŨ LÃNH ĐẠO (LEADERSHIP TEAM) -->
+      <section class="my-5">
+        <div class="text-center mb-5">
+          <span class="badge bg-info-subtle text-info-emphasis fw-bold text-uppercase px-3 py-2 rounded-pill mb-2 tracking-wider">Người Dẫn Đường</span>
+          <h3 class="fw-bold text-dark fs-3">Ban Điều Hành TechStore</h3>
+          <p class="text-secondary col-md-6 mx-auto small">Những nhà lãnh đạo tận tâm luôn nỗ lực đưa TechStore trở thành thương hiệu công nghệ được yêu thích nhất.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white text-center p-3 h-100">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" class="card-img-top rounded-4 object-fit-cover mb-3" style="height: 220px;" alt="CEO">
+              <h5 class="fw-bold text-dark mb-1 fs-6">Nguyễn Văn Hoàng</h5>
+              <span class="text-primary fs-8 fw-bold mb-2 d-block">Giám Đốc Điều Hành (CEO)</span>
+              <p class="text-muted small line-clamp-2 mb-3 fs-8">10 năm kinh nghiệm trong ngành bán lẻ thiết bị điện tử cao cấp.</p>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="#" class="btn btn-sm btn-light rounded-circle text-primary"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="btn btn-sm btn-light rounded-circle text-info"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white text-center p-3 h-100">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" class="card-img-top rounded-4 object-fit-cover mb-3" style="height: 220px;" alt="CTO">
+              <h5 class="fw-bold text-dark mb-1 fs-6">Trần Thị Mai</h5>
+              <span class="text-success fs-8 fw-bold mb-2 d-block">Giám Đốc Công Nghệ (CTO)</span>
+              <p class="text-muted small line-clamp-2 mb-3 fs-8">Chuyên gia tối ưu hóa trải nghiệm khách hàng và giải pháp E-commerce.</p>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="#" class="btn btn-sm btn-light rounded-circle text-primary"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="btn btn-sm btn-light rounded-circle text-info"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white text-center p-3 h-100">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" class="card-img-top rounded-4 object-fit-cover mb-3" style="height: 220px;" alt="CMO">
+              <h5 class="fw-bold text-dark mb-1 fs-6">Lê Quốc Bảo</h5>
+              <span class="text-warning fs-8 fw-bold mb-2 d-block">Giám Đốc Marketing (CMO)</span>
+              <p class="text-muted small line-clamp-2 mb-3 fs-8">Định hình chiến lược phát triển thương hiệu và truyền thông sản phẩm.</p>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="#" class="btn btn-sm btn-light rounded-circle text-primary"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="btn btn-sm btn-light rounded-circle text-info"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white text-center p-3 h-100">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" class="card-img-top rounded-4 object-fit-cover mb-3" style="height: 220px;" alt="CSO">
+              <h5 class="fw-bold text-dark mb-1 fs-6">Phạm Thu Trang</h5>
+              <span class="text-danger fs-8 fw-bold mb-2 d-block">Trưởng Phục Vụ Khách Hàng</span>
+              <p class="text-muted small line-clamp-2 mb-3 fs-8">Đảm bảo chất lượng chăm sóc khách hàng và hậu mãi luôn đạt 5 sao.</p>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="#" class="btn btn-sm btn-light rounded-circle text-primary"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="btn btn-sm btn-light rounded-circle text-info"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3.6: ĐỐI TÁC THƯƠNG HIỆU HÀNG ĐẦU (BRAND PARTNERS) -->
+      <section class="my-5 py-4 bg-white rounded-5 shadow-sm border p-4 text-center">
+        <span class="badge bg-secondary-subtle text-secondary fw-bold text-uppercase px-3 py-1.5 rounded-pill mb-2 fs-8">Đối Tác Ủy Quyền</span>
+        <h4 class="fw-bold text-dark mb-4">Các Thương Hiệu Công Nghệ Đồng Hành</h4>
+
+        <div class="row align-items-center justify-content-center g-4 opacity-75">
+          <div class="col-4 col-md-2">
+            <div class="p-2 border rounded-3 bg-light"><i class="fa-brands fa-apple display-6 text-dark"></i> <span class="d-block fw-bold fs-8">Apple</span></div>
+          </div>
+          <div class="col-4 col-md-2">
+            <div class="p-2 border rounded-3 bg-light"><i class="fa-solid fa-laptop display-6 text-primary"></i> <span class="d-block fw-bold fs-8">ASUS</span></div>
+          </div>
+          <div class="col-4 col-md-2">
+            <div class="p-2 border rounded-3 bg-light"><i class="fa-solid fa-mobile-screen display-6 text-info"></i> <span class="d-block fw-bold fs-8">Samsung</span></div>
+          </div>
+          <div class="col-4 col-md-2">
+            <div class="p-2 border rounded-3 bg-light"><i class="fa-solid fa-desktop display-6 text-success"></i> <span class="d-block fw-bold fs-8">Dell</span></div>
+          </div>
+          <div class="col-4 col-md-2">
+            <div class="p-2 border rounded-3 bg-light"><i class="fa-solid fa-headphones display-6 text-danger"></i> <span class="d-block fw-bold fs-8">Sony</span></div>
+          </div>
+          <div class="col-4 col-md-2">
+            <div class="p-2 border rounded-3 bg-light"><i class="fa-solid fa-keyboard display-6 text-warning"></i> <span class="d-block fw-bold fs-8">Keychron</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3.7: CALL TO ACTION BANNER (CTA) -->
+      <section class="my-5 p-4 p-md-5 rounded-5 shadow-lg text-white text-center position-relative overflow-hidden" style="background: var(--primary-gradient);">
+        <div class="position-relative" style="z-index: 2;">
+          <span class="badge bg-white bg-opacity-20 text-white fw-bold text-uppercase px-3 py-2 rounded-pill mb-3 tracking-wider">
+            <i class="fa-solid fa-rocket me-1"></i> Trải Nghiệm Mua Sắm
+          </span>
+          <h2 class="display-6 fw-bold mb-3">Sẵn Sàng Nâng Tầm Trải Nghiệm Công Nghệ?</h2>
+          <p class="lead text-white-50 col-md-8 mx-auto mb-4">
+            Khám phá ngay hàng trăm sản phẩm Laptop, Smartphone và Phụ kiện cao cấp đang có chương trình ưu đãi giảm giá đặc biệt tại TechStore.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="index.html" class="btn btn-light btn-lg fw-bold rounded-pill px-5 shadow-sm text-primary">
+              <i class="fa-solid fa-bag-shopping me-2"></i> Khám Phá Sản Phẩm
+            </a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg fw-bold rounded-pill px-5">
+              <i class="fa-solid fa-headset me-2"></i> Liên Hệ Tư Vấn
+            </a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <!-- 4. FOOTER (JS tự động nạp bot.html vào đây) -->
