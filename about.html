@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="bg-light d-flex flex-column min-vh-100">
@@ -21,14 +22,14 @@
     <div id="header-placeholder"></div>
 
     <!-- 2. BREADCRUMB / BANNER ĐẦU TRANG -->
-    <section
-      class="bg-primary text-white py-5 text-center position-relative overflow-hidden"
-    >
-      <div class="container py-3">
-        <h1 class="display-5 fw-bold mb-2">Về Chúng Tôi</h1>
-        <p class="lead mb-0 text-white-50">
-          Hành trình mang công nghệ đỉnh cao đến gần hơn với người tiêu dùng
-          Việt Nam.
+    <section class="py-5 text-center position-relative overflow-hidden" style="background: var(--primary-gradient);">
+      <div class="container py-4 position-relative" style="z-index: 2;">
+        <span class="badge bg-white bg-opacity-20 text-white fw-bold text-uppercase px-3 py-2 rounded-pill mb-3 tracking-wider">
+          <i class="fa-solid fa-star me-1"></i> Thương Hiệu Hàng Đầu
+        </span>
+        <h1 class="display-4 fw-bold mb-3 text-white">Về Chúng Tôi</h1>
+        <p class="lead mb-0 text-white-50 col-md-8 mx-auto">
+          Hành trình mang công nghệ đỉnh cao và trải nghiệm tuyệt vời nhất đến gần hơn với người tiêu dùng Việt Nam.
         </p>
       </div>
     </section>
@@ -39,41 +40,39 @@
       <div class="row align-items-center g-5 mb-5">
         <div class="col-lg-6">
           <span
-            class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-3 py-2 rounded-pill mb-3"
+            class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-3 py-2 rounded-pill mb-3 tracking-wider"
           >
-            Thương hiệu uy tín
+            Sứ Mệnh TechStore
           </span>
-          <h2 class="fw-bold mb-3">TechStore - Chắp Cánh Đam Mê Công Nghệ</h2>
-          <p class="text-secondary leading-relaxed">
-            Được thành lập từ niềm đam mê sâu sắc với các thiết bị công nghệ
-            hiện đại,
-            <strong>TechStore</strong> đã nhanh chóng vươn lên trở thành một
-            trong những hệ thống bán lẻ các sản phẩm công nghệ chính hãng hàng
-            đầu tại Việt Nam.
+          <h2 class="fw-bold mb-3 display-6 fs-2 text-dark">Chắp Cánh Đam Mê Công Nghệ</h2>
+          <p class="text-secondary leading-relaxed mb-3">
+            Được thành lập từ niềm đam mê sâu sắc với các thiết bị công nghệ hiện đại,
+            <strong class="text-dark">TechStore</strong> đã nhanh chóng vươn lên trở thành một trong những hệ thống bán lẻ các sản phẩm công nghệ chính hãng hàng đầu tại Việt Nam.
           </p>
           <p class="text-secondary leading-relaxed mb-4">
             Chúng tôi tự hào mang đến cho khách hàng các giải pháp toàn diện từ
             <em>Laptop, Điện thoại thông minh cho đến các Phụ kiện cao cấp</em>
-            với mức giá cạnh tranh nhất cùng dịch vụ hậu mãi chu đáo.
+            với mức giá cạnh tranh nhất cùng dịch vụ hậu mãi chu đáo, tận tâm.
           </p>
 
+          <!-- Thống kê ấn tượng -->
           <div class="row g-3 text-center">
             <div class="col-4">
-              <div class="p-3 bg-white rounded-3 shadow-sm border">
+              <div class="p-3.5 bg-white rounded-4 shadow-sm border h-100">
                 <h3 class="fw-bold text-primary mb-1">5+</h3>
-                <span class="text-muted fs-7">Năm kinh nghiệm</span>
+                <span class="text-muted fs-7">Năm Kinh Nghiệm</span>
               </div>
             </div>
             <div class="col-4">
-              <div class="p-3 bg-white rounded-3 shadow-sm border">
+              <div class="p-3.5 bg-white rounded-4 shadow-sm border h-100">
                 <h3 class="fw-bold text-primary mb-1">50K+</h3>
-                <span class="text-muted fs-7">Khách hàng tin dùng</span>
+                <span class="text-muted fs-7">Khách Tin Dùng</span>
               </div>
             </div>
             <div class="col-4">
-              <div class="p-3 bg-white rounded-3 shadow-sm border">
+              <div class="p-3.5 bg-white rounded-4 shadow-sm border h-100">
                 <h3 class="fw-bold text-primary mb-1">100%</h3>
-                <span class="text-muted fs-7">Hàng chính hãng</span>
+                <span class="text-muted fs-7">Hàng Chính Hãng</span>
               </div>
             </div>
           </div>
@@ -84,31 +83,34 @@
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
               alt="Đội ngũ TechStore"
-              class="img-fluid rounded-4 shadow-lg"
+              class="img-fluid rounded-5 shadow-lg border"
             />
           </div>
         </div>
       </div>
 
       <!-- Giá trị cốt lõi -->
-      <div class="pt-4 border-top">
-        <h3 class="text-center fw-bold mb-5">Giá Trị Cốt Lõi Của Chúng Tôi</h3>
+      <div class="pt-5 border-top">
+        <div class="text-center mb-5">
+          <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-3 py-2 rounded-pill mb-2 tracking-wider">Cam Kết Hàng Đầu</span>
+          <h3 class="fw-bold text-dark display-6 fs-3">Giá Trị Cốt Lõi Của Chúng Tôi</h3>
+        </div>
+        
         <div class="row g-4">
           <!-- Thẻ 1 -->
           <div class="col-md-4">
             <div
-              class="card h-100 border-0 shadow-sm p-4 text-center rounded-4"
+              class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white"
             >
               <div
-                class="icon-box bg-primary-subtle text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
-                style="width: 60px; height: 60px"
+                class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+                style="width: 64px; height: 64px"
               >
-                <i class="fa-solid fa-shield-halved fs-4"></i>
+                <i class="fa-solid fa-shield-halved fs-3"></i>
               </div>
-              <h5 class="fw-bold mb-2">Chất Lượng Cam Kết</h5>
-              <p class="text-muted small m-0">
-                Cam kết 100% sản phẩm phân phối là hàng chính hãng, đầy đủ giấy
-                tờ chứng nhận và chế độ bảo hành chuẩn nhà sản xuất.
+              <h5 class="fw-bold mb-2 text-dark">Chất Lượng Cam Kết</h5>
+              <p class="text-muted small m-0 lh-base">
+                Cam kết 100% sản phẩm phân phối là hàng chính hãng, đầy đủ giấy tờ chứng nhận và chế độ bảo hành chuẩn nhà sản xuất.
               </p>
             </div>
           </div>
@@ -116,18 +118,17 @@
           <!-- Thẻ 2 -->
           <div class="col-md-4">
             <div
-              class="card h-100 border-0 shadow-sm p-4 text-center rounded-4"
+              class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white"
             >
               <div
-                class="icon-box bg-primary-subtle text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
-                style="width: 60px; height: 60px"
+                class="icon-box bg-success bg-opacity-10 text-success rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+                style="width: 64px; height: 64px"
               >
-                <i class="fa-solid fa-truck-fast fs-4"></i>
+                <i class="fa-solid fa-truck-fast fs-3"></i>
               </div>
-              <h5 class="fw-bold mb-2">Giao Hàng Tốc Độ</h5>
-              <p class="text-muted small m-0">
-                Hỗ trợ giao hàng siêu tốc trong nội thành và vận chuyển an toàn,
-                bảo hiểm đến tận tay khách hàng trên toàn quốc.
+              <h5 class="fw-bold mb-2 text-dark">Giao Hàng Tốc Độ</h5>
+              <p class="text-muted small m-0 lh-base">
+                Hỗ trợ giao hàng siêu tốc trong nội thành và vận chuyển an toàn, bảo hiểm tận tay khách hàng trên toàn quốc.
               </p>
             </div>
           </div>
@@ -135,18 +136,17 @@
           <!-- Thẻ 3 -->
           <div class="col-md-4">
             <div
-              class="card h-100 border-0 shadow-sm p-4 text-center rounded-4"
+              class="card h-100 border-0 shadow-sm p-4 text-center rounded-4 bg-white"
             >
               <div
-                class="icon-box bg-primary-subtle text-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
-                style="width: 60px; height: 60px"
+                class="icon-box bg-warning bg-opacity-10 text-warning rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+                style="width: 64px; height: 64px"
               >
-                <i class="fa-solid fa-headset fs-4"></i>
+                <i class="fa-solid fa-headset fs-3"></i>
               </div>
-              <h5 class="fw-bold mb-2">Tận Tâm Phục Vụ</h5>
-              <p class="text-muted small m-0">
-                Đội ngũ tư vấn viên am hiểu kỹ thuật luôn sẵn sàng hỗ trợ, giải
-                đáp thắc mắc của quý khách hàng 24/7.
+              <h5 class="fw-bold mb-2 text-dark">Tận Tâm Phục Vụ</h5>
+              <p class="text-muted small m-0 lh-base">
+                Đội ngũ tư vấn viên am hiểu kỹ thuật luôn sẵn sàng hỗ trợ, giải đáp thắc mắc của quý khách hàng 24/7.
               </p>
             </div>
           </div>
@@ -157,7 +157,7 @@
     <!-- 4. FOOTER (JS tự động nạp bot.html vào đây) -->
     <div id="footer-placeholder"></div>
 
-    <!-- SCRIPT BOOTSTRAP, MAIN.JS VÀ PRODUCT.JS -->
+    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/product.js"></script>

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cửa Hàng Công Nghệ TechStore</title>
+    <title>Cửa Hàng Công Nghệ TechStore - Thiết Bị Chính Hãng & Cao Cấp</title>
+    <meta name="description" content="TechStore - Hệ thống bán lẻ Laptop, Điện thoại, Phụ kiện công nghệ chính hãng hàng đầu Việt Nam với giá tốt nhất." />
     <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -14,30 +15,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <!-- Custom CSS System -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <style>
-      /* CSS Bổ Sung Riêng Cho Khối Đặt Lịch 3 Bước */
-      .booking-btn {
-        background-color: #ff5722;
-        color: #fff;
-        transition: all 0.3s ease;
-      }
-      .booking-btn:hover {
-        background-color: #e64a19;
-        color: #fff;
-        transform: translateY(-2px);
-      }
-      .box-img-icon {
-        width: 90px;
-        height: 90px;
-        border-radius: 20px;
-        background-color: #fff;
-        transition: transform 0.3s ease;
-      }
-      .item-booking:hover .box-img-icon {
-        transform: translateY(-5px);
-      }
+      /* Style khối Đặt lịch 3 Bước */
       @media (min-width: 992px) {
         .step-col {
           position: relative;
@@ -45,7 +27,7 @@
         .step-col:not(:last-child)::after {
           content: "";
           position: absolute;
-          top: 35px;
+          top: 40px;
           right: -30%;
           width: 60%;
           height: 30px;
@@ -57,19 +39,19 @@
     </style>
   </head>
   <body class="bg-light">
-    <!-- 1. HEADER + NAV (JS tự động nạp top.html) -->
+    <!-- 1. HEADER + NAV (JS nạp top.html vào id header-placeholder) -->
     <div id="header-placeholder"></div>
 
-    <!-- 2. BANNER SLIDER HEROSECTION (2 CỘT TÁCH BIỆT) -->
-    <section class="hero-carousel-section py-4 bg-light">
+    <!-- 2. BANNER SLIDER HERO SECTION -->
+    <section class="hero-carousel-section py-4 py-lg-5">
       <div class="container">
         <div
           id="techStoreCarousel"
-          class="carousel slide shadow-sm rounded-4 bg-white overflow-hidden"
+          class="carousel slide rounded-5 bg-white overflow-hidden"
           data-bs-ride="carousel"
         >
           <!-- Indicator Nút chuyển slide bên dưới -->
-          <div class="carousel-indicators mb-2">
+          <div class="carousel-indicators mb-3">
             <button
               type="button"
               data-bs-target="#techStoreCarousel"
@@ -86,7 +68,7 @@
             ></button>
           </div>
 
-          <!-- JS tự render dữ liệu vào đây thông qua renderHeroSlide(data) -->
+          <!-- JS render dữ liệu slide thông qua renderHeroSlide(data) -->
           <div class="carousel-inner"></div>
 
           <!-- Nút điều hướng Trái/Phải của Carousel -->
@@ -95,49 +77,56 @@
             type="button"
             data-bs-target="#techStoreCarousel"
             data-bs-slide="prev"
-            style="width: 5%"
+            style="width: 6%"
           >
             <span
-              class="carousel-control-prev-icon bg-dark rounded-circle p-3"
+              class="carousel-control-prev-icon rounded-circle p-3"
               aria-hidden="true"
-              style="background-size: 50%"
+              style="background-size: 45%"
             ></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">Trước</span>
           </button>
           <button
             class="carousel-control-next"
             type="button"
             data-bs-target="#techStoreCarousel"
             data-bs-slide="next"
-            style="width: 5%"
+            style="width: 6%"
           >
             <span
-              class="carousel-control-next-icon bg-dark rounded-circle p-3"
+              class="carousel-control-next-icon rounded-circle p-3"
               aria-hidden="true"
-              style="background-size: 50%"
+              style="background-size: 45%"
             ></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">Sau</span>
           </button>
         </div>
       </div>
     </section>
-    <!-- 5. DỊCH VỤ NÂNG CẤP (ĐẶT LỊCH TƯ VẤN 3 BƯỚC) -->
+
+    <!-- 3. DỊCH VỤ NÂNG CẤP (ĐẶT LỊCH TƯ VẤN 3 BƯỚC) -->
     <section class="m-booking py-5 bg-white border-top border-bottom">
       <div class="container">
         <!-- TIÊU ĐỀ SECTION -->
         <div class="box-title text-center mb-5">
-          <p
-            class="mb-2 text-uppercase text-danger fw-bold fs-7 tracking-wider"
+          <span
+            class="badge bg-danger-subtle text-danger fw-bold fs-7 tracking-wider text-uppercase px-3 py-2 rounded-pill mb-2 d-inline-block"
           >
-            Dịch vụ nâng cấp & Sửa chữa
+            <i class="fa-solid fa-wrench me-1"></i> Dịch Vụ Nâng Cấp & Sửa Chữa
+          </span>
+          <h2 class="fw-bold mb-3 text-dark display-6 fs-3">
+            Đặt Lịch Tư Vấn Chỉ Với 3 Bước
+          </h2>
+          <p class="text-secondary col-md-6 mx-auto mb-3">
+            Quy trình hỗ trợ chuyên nghiệp, nhanh chóng và tận tâm dành cho mọi thiết bị của bạn.
           </p>
-          <h2 class="fw-bold mb-3 text-dark">Đặt lịch tư vấn chỉ với 3 bước</h2>
           <a
             href="javascript:;"
             title="Đặt lịch ngay"
-            class="booking-btn d-inline-block rounded-pill fw-bold py-2 px-4 shadow text-decoration-none mt-2"
+            class="booking-btn d-inline-flex align-items-center gap-2 rounded-pill fw-bold py-2.5 px-4 text-decoration-none shadow"
           >
-            Đặt lịch ngay <i class="fa-solid fa-calendar-check ms-1"></i>
+            <span>Đặt Lịch Ngay</span>
+            <i class="fa-solid fa-calendar-check fs-6"></i>
           </a>
         </div>
 
@@ -147,19 +136,19 @@
           <div class="col-12 col-md-6 col-lg-4 step-col">
             <div class="item-booking text-center px-3">
               <div
-                class="box-img-icon mx-auto mb-4 d-flex align-items-center justify-content-center shadow-lg position-relative"
+                class="box-img-icon mx-auto mb-4 d-flex align-items-center justify-content-center position-relative"
                 style="z-index: 2"
               >
                 <img
                   src="https://file.hstatic.net/200000894447/file/placeholder__1__888d1fc89678400d957a3814b59c585e.png"
                   alt="Chọn cơ sở"
                   class="img-fluid p-3"
-                  style="max-height: 80px; object-fit: contain"
+                  style="max-height: 75px; object-fit: contain"
                 />
               </div>
-              <h5 class="fw-bold text-dark mb-2">1. Chọn cơ sở</h5>
+              <h5 class="fw-bold text-dark mb-2">1. Chọn Cơ Sở</h5>
               <p class="text-secondary small mb-0 px-xl-4">
-                Với 45 chi nhánh phủ sóng rộng khắp trên toàn quốc
+                Hệ thống hơn 45 chi nhánh hiện đại phủ sóng trên toàn quốc
               </p>
             </div>
           </div>
@@ -168,19 +157,19 @@
           <div class="col-12 col-md-6 col-lg-4 step-col">
             <div class="item-booking text-center px-3">
               <div
-                class="box-img-icon mx-auto mb-4 d-flex align-items-center justify-content-center shadow-lg position-relative"
+                class="box-img-icon mx-auto mb-4 d-flex align-items-center justify-content-center position-relative"
                 style="z-index: 2"
               >
                 <img
                   src="https://file.hstatic.net/200000894447/file/calendar_8858519efe4a44429c22ec89de365f9e.png"
                   alt="Chọn ngày"
                   class="img-fluid p-3"
-                  style="max-height: 80px; object-fit: contain"
+                  style="max-height: 75px; object-fit: contain"
                 />
               </div>
-              <h5 class="fw-bold text-dark mb-2">2. Chọn ngày</h5>
+              <h5 class="fw-bold text-dark mb-2">2. Chọn Ngày</h5>
               <p class="text-secondary small mb-0 px-xl-4">
-                TechStore nhận lịch tư vấn hỗ trợ tất cả các ngày trong tuần
+                Sẵn sàng tư vấn và hỗ trợ khách hàng tất cả các ngày trong tuần
               </p>
             </div>
           </div>
@@ -189,50 +178,59 @@
           <div class="col-12 col-md-6 col-lg-4 step-col">
             <div class="item-booking text-center px-3">
               <div
-                class="box-img-icon mx-auto mb-4 d-flex align-items-center justify-content-center shadow-lg position-relative"
+                class="box-img-icon mx-auto mb-4 d-flex align-items-center justify-content-center position-relative"
                 style="z-index: 2"
               >
                 <img
                   src="https://file.hstatic.net/200000894447/file/car__1__90f93d48d36f4e35a9dfed2df754a786.png"
                   alt="Chọn thiết bị"
                   class="img-fluid p-3"
-                  style="max-height: 80px; object-fit: contain"
+                  style="max-height: 75px; object-fit: contain"
                 />
               </div>
-              <h5 class="fw-bold text-dark mb-2">3. Chọn thiết bị</h5>
+              <h5 class="fw-bold text-dark mb-2">3. Chọn Thiết Bị</h5>
               <p class="text-secondary small mb-0 px-xl-4">
-                Hỗ trợ tư vấn nâng cấp cho hầu hết tất cả các dòng Laptop & Điện
-                thoại
+                Hỗ trợ nâng cấp cho tất cả dòng Laptop, Điện thoại & Máy tính bảng
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- SECTION GIỚI THIỆU VỀ TECHSTORE -->
-    <section class="m_about py-5 bg-white border-top border-bottom">
-      <div class="container py-lg-4">
-        <div class="row align-items-center g-4">
+
+    <!-- 4. SECTION GIỚI THIỆU VỀ TECHSTORE -->
+    <section class="m_about py-5 bg-white border-bottom">
+      <div class="container py-lg-3">
+        <div class="row align-items-center g-5">
           <!-- CỘT TRÁI: HÌNH ẢNH NỔI BẬT -->
-          <div class="col-12 col-md-6 text-center pe-lg-5">
+          <div class="col-12 col-lg-6 text-center">
             <div class="position-relative d-inline-block">
               <img
-                class="img-fluid rounded-4 shadow-lg"
-                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80"
+                class="img-fluid rounded-5 shadow-lg border"
+                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80"
                 alt="Trải nghiệm công nghệ cùng TechStore"
-                style="max-height: 450px; object-fit: contain"
+                style="max-height: 440px; width: 100%; object-fit: cover"
               />
+              <div class="position-absolute bottom-0 start-0 m-4 bg-white bg-opacity-90 backdrop-blur p-3 rounded-4 shadow-sm border text-start d-none d-sm-block">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="bg-primary bg-opacity-10 p-2.5 rounded-3 text-primary">
+                    <i class="fa-solid fa-award fs-3"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold m-0 fs-6">Đơn vị uy tín #1</h6>
+                    <small class="text-muted">Hơn 50,000+ Khách hàng tin dùng</small>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- CỘT PHẢI: NỘI DUNG VÀ 3 TIỆN ÍCH NỔI BẬT -->
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-lg-6">
             <div class="box_title text-start mb-3">
-              <p
-                class="mb-2 text-uppercase text-primary fw-bold fs-7 tracking-wider"
-              >
-                Dịch vụ hàng đầu
-              </p>
+              <span class="badge bg-primary-subtle text-primary fw-bold fs-7 tracking-wider text-uppercase px-3 py-2 rounded-pill mb-2 d-inline-block">
+                Dịch Vụ Hàng Đầu
+              </span>
               <h2 class="mb-3 fw-bold text-dark display-6 fs-3">
                 Trải Nghiệm Công Nghệ Đỉnh Cao Cùng TechStore
               </h2>
@@ -247,10 +245,10 @@
 
             <!-- 1. THIẾT BỊ THÔNG MINH -->
             <div class="item_abouts d-flex align-items-start mb-3">
-              <div class="img_about me-3 me-lg-4 flex-shrink-0">
+              <div class="img_about me-3 flex-shrink-0">
                 <div
-                  class="p-2 rounded-3 shadow-sm bg-light border"
-                  style="width: 56px; height: 56px"
+                  class="p-2.5 rounded-4 shadow-sm bg-primary bg-opacity-10 border border-primary-subtle d-flex align-items-center justify-content-center"
+                  style="width: 54px; height: 54px"
                 >
                   <img
                     class="img-fluid w-100 h-100"
@@ -261,20 +259,19 @@
                 </div>
               </div>
               <div class="des_about">
-                <h6 class="fw-bold text-dark mb-1">Sản phẩm chính hãng 100%</h6>
+                <h6 class="fw-bold text-dark mb-1">Sản Phẩm Chính Hãng 100%</h6>
                 <p class="text-secondary small mb-0">
-                  Cam kết chất lượng đạt chuẩn quốc tế, đầy đủ giấy tờ bảo hành
-                  từ nhà sản xuất.
+                  Cam kết chất lượng đạt chuẩn quốc tế, đầy đủ chứng nhận & bảo hành chuẩn hãng.
                 </p>
               </div>
             </div>
 
             <!-- 2. TRẢI NGHIỆM THÚ VỊ -->
             <div class="item_abouts d-flex align-items-start mb-3">
-              <div class="img_about me-3 me-lg-4 flex-shrink-0">
+              <div class="img_about me-3 flex-shrink-0">
                 <div
-                  class="p-2 rounded-3 shadow-sm bg-light border"
-                  style="width: 56px; height: 56px"
+                  class="p-2.5 rounded-4 shadow-sm bg-warning bg-opacity-10 border border-warning-subtle d-flex align-items-center justify-content-center"
+                  style="width: 54px; height: 54px"
                 >
                   <img
                     class="img-fluid w-100 h-100"
@@ -286,21 +283,20 @@
               </div>
               <div class="des_about">
                 <h6 class="fw-bold text-dark mb-1">
-                  Trải nghiệm mua sắm tuyệt vời
+                  Trải Nghiệm Mua Sắm Tuyệt Vời
                 </h6>
                 <p class="text-secondary small mb-0">
-                  Đội ngũ tư vấn chuyên nghiệp, sẵn sàng hỗ trợ bạn chọn được
-                  thiết bị ưng ý nhất.
+                  Đội ngũ tư vấn chuyên nghiệp, am hiểu sâu sắc luôn sẵn sàng hỗ trợ bạn.
                 </p>
               </div>
             </div>
 
             <!-- 3. KẾT NỐI TOÀN CẦU -->
             <div class="item_abouts d-flex align-items-start mb-4">
-              <div class="img_about me-3 me-lg-4 flex-shrink-0">
+              <div class="img_about me-3 flex-shrink-0">
                 <div
-                  class="p-2 rounded-3 shadow-sm bg-light border"
-                  style="width: 56px; height: 56px"
+                  class="p-2.5 rounded-4 shadow-sm bg-info bg-opacity-10 border border-info-subtle d-flex align-items-center justify-content-center"
+                  style="width: 54px; height: 54px"
                 >
                   <img
                     class="img-fluid w-100 h-100"
@@ -312,11 +308,10 @@
               </div>
               <div class="des_about">
                 <h6 class="fw-bold text-dark mb-1">
-                  Hậu mãi & Bảo hành nhanh chóng
+                  Hậu Mãi & Bảo Hành Nhanh Chóng
                 </h6>
                 <p class="text-secondary small mb-0">
-                  Hỗ trợ kỹ thuật 24/7 và chính sách 1 đổi 1 trong 30 ngày nếu
-                  phát sinh lỗi.
+                  Hỗ trợ kỹ thuật 24/7 và chính sách 1 đổi 1 trong 30 ngày nếu phát sinh lỗi.
                 </p>
               </div>
             </div>
@@ -324,49 +319,51 @@
             <!-- NÚT XEM THÊM -->
             <div class="m_about_btn pt-2">
               <a
-                class="btn btn-outline-primary fw-bold rounded-pill px-4 py-2"
+                class="btn btn-outline-primary fw-bold rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2"
                 href="about.html"
                 title="Xem thêm"
               >
-                Tìm hiểu thêm <i class="fa-solid fa-arrow-right ms-2 fs-7"></i>
+                <span>Tìm Hiểu Thêm</span>
+                <i class="fa-solid fa-arrow-right fs-7"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- 3. BỘ LỌC DANH MỤC -->
-    <section class="filter-section bg-white py-4 border-bottom">
+
+    <!-- 5. BỘ LỌC DANH MỤC (Hook: categoryTabs, tab-btn, filterSelect) -->
+    <section class="filter-section py-4">
       <div
-        class="container filter-wrapper d-flex flex-wrap align-items-center justify-content-between gap-3"
+        class="container filter-wrapper d-flex flex-wrap align-items-center justify-content-between gap-3 p-3 rounded-4 border shadow-sm"
       >
         <div
-          class="category-tabs btn-group flex-wrap"
+          class="category-tabs btn-group flex-wrap gap-2"
           role="group"
           id="categoryTabs"
         >
           <button
-            class="tab-btn btn btn-outline-primary active"
+            class="tab-btn btn active"
             data-value="all"
           >
-            <i class="fa-solid fa-border-all me-1"></i> Tất cả
+            <i class="fa-solid fa-border-all me-1.5"></i> Tất Cả
           </button>
-          <button class="tab-btn btn btn-outline-primary" data-value="laptop">
-            <i class="fa-solid fa-laptop me-1"></i> Laptop
+          <button class="tab-btn btn" data-value="laptop">
+            <i class="fa-solid fa-laptop me-1.5"></i> Laptop
           </button>
-          <button class="tab-btn btn btn-outline-primary" data-value="phone">
-            <i class="fa-solid fa-mobile-screen-button me-1"></i> Điện thoại
+          <button class="tab-btn btn" data-value="phone">
+            <i class="fa-solid fa-mobile-screen-button me-1.5"></i> Điện Thoại
           </button>
           <button
-            class="tab-btn btn btn-outline-primary"
+            class="tab-btn btn"
             data-value="accessory"
           >
-            <i class="fa-solid fa-keyboard me-1"></i> Phụ kiện
+            <i class="fa-solid fa-keyboard me-1.5"></i> Phụ Kiện
           </button>
         </div>
 
-        <div class="filter-controls">
-          <select id="filterSelect" class="form-select">
+        <div class="filter-controls ms-auto">
+          <select id="filterSelect" class="form-select shadow-none">
             <option value="all">Tất cả danh mục</option>
             <option value="laptop">Laptop</option>
             <option value="phone">Điện thoại</option>
@@ -376,51 +373,54 @@
       </div>
     </section>
 
-    <!-- 4. DANH SÁCH SẢN PHẨM -->
+    <!-- 6. DANH SÁCH SẢN PHẨM (Hook: productGrid - product.js render sản phẩm vào đây) -->
     <main class="container my-5">
-      <h2 class="section-title h3 mb-4 fw-bold">Danh Sách Sản Phẩm Nổi Bật</h2>
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <h2 class="section-title h3 fw-bold m-0">Sản Phẩm Nổi Bật</h2>
+      </div>
+      
+      <!-- Khung chứa sản phẩm do JS tự động render -->
       <div class="product-grid row g-4" id="productGrid"></div>
     </main>
-    <!-- SECTION TIN TỨC MỚI NHẤT (TECHSTORE) -->
-    <section id="m_blog" class="m_blog py-5 bg-light border-bottom">
+
+    <!-- 7. SECTION TIN TỨC MỚI NHẤT (Hook: homeNewsGrid) -->
+    <section id="m_blog" class="m_blog py-5 bg-white border-top border-bottom">
       <div class="container">
         <!-- TIÊU ĐỀ SECTION -->
         <div class="box_title text-center mb-5">
-          <p
-            class="mb-2 text-uppercase text-primary fw-bold fs-7 tracking-wider"
+          <span
+            class="badge bg-primary-subtle text-primary fw-bold fs-7 tracking-wider text-uppercase px-3 py-2 rounded-pill mb-2 d-inline-block"
           >
             Tin Tức & Kinh Nghiệm
-          </p>
+          </span>
           <h2 class="mb-3 fw-bold text-dark display-6 fs-3">
             Tin Tức Công Nghệ Mới Nhất
           </h2>
           <p class="text-secondary col-md-8 mx-auto mb-0">
-            Cập nhật liên tục xu hướng, đánh giá sản phẩm và thủ thuật công nghệ
-            mới nhất từ TechStore.
+            Cập nhật liên tục xu hướng, đánh giá sản phẩm và thủ thuật công nghệ mới nhất từ TechStore.
           </p>
         </div>
 
-        <!-- KHUNG ĐỂ JAVASCRIPT RENDER CARD BÀI VIẾT TIN TỨC -->
-        <div class="row g-4" id="homeNewsGrid">
-          <!-- JavaScript (product.js) sẽ tự động render các bài viết vào đây -->
-        </div>
+        <!-- KHUNG ĐỂ JAVASCRIPT RENDER CARD BÀI VIẾT TIN TỨC (Hook: homeNewsGrid) -->
+        <div class="row g-4" id="homeNewsGrid"></div>
 
         <!-- NÚT XEM TẤT CẢ -->
         <div class="text-center mt-5">
           <a
             href="news.html"
-            class="btn btn-outline-primary rounded-pill fw-bold px-4 py-2"
+            class="btn btn-outline-primary rounded-pill fw-bold px-4 py-2 d-inline-flex align-items-center gap-2"
           >
-            Xem tất cả bài viết
-            <i class="fa-solid fa-arrow-right ms-2 fs-7"></i>
+            <span>Xem Tất Cả Bài Viết</span>
+            <i class="fa-solid fa-arrow-right fs-7"></i>
           </a>
         </div>
       </div>
     </section>
-    <!-- 6. FOOTER (JS tự động nạp bot.html) -->
+
+    <!-- 8. FOOTER (JS nạp bot.html vào id footer-placeholder) -->
     <div id="footer-placeholder"></div>
 
-    <!-- SCRIPT BOOTSTRAP, MAIN.JS VÀ PRODUCT.JS -->
+    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/product.js"></script>
