@@ -1,115 +1,37 @@
-// 1. MẢNG DỮ LIỆU SẢN PHẨM (Giá đã đổi thành SỐ để tính toán đơn giản)
-const products = [
-  {
-    id: 1,
-    name: "Laptop Asus Zenbook 14 OLED",
-    category: "laptop",
-    price: 24990000,
-    image:
-      "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRiTW5NdObcAtYhs9BRIH9TW3NPoDV2hFsZE4OJ-qwaBJR2bdGz44kHEDdOazNuVVQfuJ8rIq6iOf7JUUzQlM5jGhaN6vlz0JuVMyehCSMBkmI&usqp=CAc",
-  },
-  {
-    id: 2,
-    name: "iPhone 15 Pro Max 256GB",
-    category: "phone",
-    price: 29490000,
-    image:
-      "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=500&q=80",
-  },
-  {
-    id: 3,
-    name: "Bàn phím cơ Không dây Keychron K2",
-    category: "accessory",
-    price: 1850000,
-    image:
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=500&q=80",
-  },
-  {
-    id: 4,
-    name: "MacBook Air M3 (2024)",
-    category: "laptop",
-    price: 27950000,
-    image:
-      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80",
-  },
-  {
-    id: 5,
-    name: "Điện thoại Samsung Galaxy S24 Ultra",
-    category: "phone",
-    price: 26190000,
-    image:
-      "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=500&q=80",
-  },
-  {
-    id: 6,
-    name: "Tai nghe Sony WH-1000XM5 Chống ồn",
-    category: "accessory",
-    price: 6490000,
-    image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80",
-  },
-  {
-    id: 7,
-    name: "iPhone 15 Pro Max 256GB",
-    category: "phone",
-    price: 29590000,
-    image:
-      "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=500&q=80",
-  },
-  {
-    id: 8,
-    name: "Laptop Dell XPS 13 9320",
-    category: "laptop",
-    price: 34500000,
-    image:
-      "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=500&q=80",
-  },
-  {
-    id: 9,
-    name: "Apple Watch Series 9 GPS",
-    category: "accessory",
-    price: 9890000,
-    image:
-      "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=500&q=80",
-  },
-  {
-    id: 10,
-    name: "Máy tính bảng iPad Air 5 M1",
-    category: "tablet",
-    price: 13990000,
-    image:
-      "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=500&q=80",
-  },
-  {
-    id: 11,
-    name: "Bàn phím cơ Logitech MX Keys S",
-    category: "accessory",
-    price: 2850000,
-    image:
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=500&q=80",
-  },
-  {
-    id: 12,
-    name: "Laptop ASUS ROG Zephyrus G14",
-    category: "laptop",
-    price: 32990000,
-    image:
-      "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=500&q=80",
-  },
-];
-
+let products = [];
 // Mảng giỏ hàng
 let cart = [];
+// assets/js/product.js
+
+async function loadProducts() {
+  try {
+    // Gọi đến API từ server Node.js để lấy danh sách sản phẩm từ Database
+    const response = await fetch("http://localhost:3000/api/products");
+    const products = await response.json();
+
+    console.log("Dữ liệu từ phpMyAdmin qua Node.js:", products);
+
+    // 1. Render banner Carousel nổi bật ở đầu trang
+    renderHeroSlide(products);
+
+    // 2. Render danh sách các thẻ sản phẩm chính
+    renderProducts(products);
+
+    // 3. Render danh sách các bài viết tin tức ngắn trên trang chủ
+    renderHomeNews(products);
+
+    // 4. Render bài viết tin tức chi tiết (bao gồm bài viết HOT và danh sách bài viết phụ bên phải)
+    renderNews(products);
+
+    // 5. Render các mục sản phẩm nổi bật trong menu thả xuống (Dropdown)
+    renderDropdonw(products);
+  } catch (error) {
+    console.log("Lỗi lấy dữ liệu:", error);
+  }
+}
 
 // DOM Elements
 const productGrid = document.getElementById("productGrid");
-
-// Giả lập lấy dữ liệu từ Server
-function fetchProducts() {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(products), 500);
-  });
-}
 
 // Bắt sự kiện Lọc & Tìm kiếm
 document.addEventListener("input", (e) => {
@@ -218,12 +140,6 @@ function renderHeroSlide(productsList) {
     })
     .join("");
 }
-document.addEventListener("DOMContentLoaded", () => {
-  fetchProducts().then((data) => {
-    renderProducts(data);
-    renderHeroSlide(data); // Thay cho renderCarouselProducts(data) cũ
-  });
-});
 // Render danh sách sản phẩm ra màn hình
 function renderProducts(productsList) {
   if (!productGrid) return;
@@ -313,13 +229,6 @@ function renderHomeNews(productsList) {
     })
     .join("");
 }
-renderHomeNews(products);
-document.addEventListener("DOMContentLoaded", () => {
-  fetchProducts().then((data) => {
-    // Các hàm render khác của bạn...
-    renderHomeNews(data); // Render danh sách tin tức
-  });
-});
 //Hàm render ra Tin Tức
 function renderNews(products) {
   const aboutRender = document.querySelector(".about-render");
@@ -394,7 +303,6 @@ function renderNews(products) {
   aboutRender.innerHTML = "";
   aboutRender.appendChild(div);
 }
-renderNews(products);
 function renderDropdonw(products) {
   const dropdownMenu = document.querySelector(".dropdown-menu");
   if (!dropdownMenu) return;
@@ -417,7 +325,6 @@ function renderDropdonw(products) {
     dropdownMenu.appendChild(dropdown);
   });
 }
-renderDropdonw(products);
 // Mở Quick View Modal
 function openQuickView(productId) {
   const product = products.find((p) => p.id === productId);
@@ -610,8 +517,5 @@ document.addEventListener("DOMContentLoaded", () => {
     productGrid.innerHTML =
       "<p class='text-center py-4 col-12'>Đang tải sản phẩm...</p>";
   }
-  fetchProducts().then((data) => {
-    renderProducts(data);
-    setTimeout(() => renderDropdonw(data), 800);
-  });
+  loadProducts();
 });
