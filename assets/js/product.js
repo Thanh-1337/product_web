@@ -7,7 +7,7 @@ async function loadProducts() {
   try {
     // Gọi đến API từ server Node.js để lấy danh sách sản phẩm từ Database
     const response = await fetch("http://localhost:3000/api/products");
-    const products = await response.json();
+    products = await response.json();
 
     console.log("Dữ liệu từ phpMyAdmin qua Node.js:", products);
 
@@ -24,7 +24,7 @@ async function loadProducts() {
     renderNews(products);
 
     // 5. Render các mục sản phẩm nổi bật trong menu thả xuống (Dropdown)
-    renderDropdonw(products);
+    renderDropdown(products);
   } catch (error) {
     console.log("Lỗi lấy dữ liệu:", error);
   }
@@ -79,6 +79,7 @@ function renderHeroSlide(productsList) {
   const carouseHero = document.querySelector(
     "#techStoreCarousel .carousel-inner",
   );
+  if (!carouseHero) return;
   const heroSlide = productsList.slice(9, 11);
   carouseHero.innerHTML = heroSlide
     .map((product, index) => {
@@ -303,8 +304,8 @@ function renderNews(products) {
   aboutRender.innerHTML = "";
   aboutRender.appendChild(div);
 }
-function renderDropdonw(products) {
-  const dropdownMenu = document.querySelector(".dropdown-menu");
+function renderDropdown(products) {
+  const dropdownMenu = document.getElementById("productDropdownMenu");
   if (!dropdownMenu) return;
   dropdownMenu.innerHTML = "";
   const header = document.createElement("li");

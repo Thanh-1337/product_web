@@ -39,6 +39,6 @@ function highlightActiveNav() {
 
 // Chạy hàm khi khung trang HTML đã tải xong
 document.addEventListener("DOMContentLoaded", () => {
-  loadComponent("header-placeholder", "./partials/top.html");
-  loadComponent("footer-placeholder", "./partials/bot.html");
+  loadComponent("header-placeholder", "../../partials/top.html");
+  loadComponent("footer-placeholder", "../../partials/bot.html");
 });

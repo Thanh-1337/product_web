@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div id="header-placeholder"></div>
+    </header>
+    <main>
+      <section class="acc_layout">
+        <!-- BREADCRUMB -->
+        <div
+          class="head-breadcrumb pt-5 overflow-hidden"
+          style="
+            --bg_head_breadcrumb: #fcded4;
+            --ico_head_breadcrumb: url(https://file.hstatic.net/200000894447/file/wheel_eca501ad7a014a338c91dde60d0052db.png);
+          "
+        >
+          <div class="container position-relative mt-3 mt-lg-4">
+            <div class="breadcrumbs mb-3 position-relative">
+              <ul
+                class="align-items-center bg-transparent breadcrumb m-0 p-0 small text-uppercase"
+              >
+                <li class="home">
+                  <a href="/" title="Trang chủ">Trang chủ</a>
+                  <span class="slash-divider ml-2 mr-2">/</span>
+                </li>
+                <li class="active">Đăng nhập</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN CONTAINER -->
+        <div class="container">
+          <div class="row mb-4 mb-lg-5">
+            <div class="col-lg-6 col-md-8 col-12 m-auto">
+              <div
+                class="registered-users border p-4 p-md-5 rounded-10 bg-white shadow-sm"
+              >
+                <div class="content">
+                  <!-- FORM ĐĂNG NHẬP -->
+                  <div id="customer_login_form">
+                    <form
+                      accept-charset="UTF-8"
+                      action="/account/login"
+                      id="customer_login"
+                      method="post"
+                    >
+                      <input
+                        name="form_type"
+                        type="hidden"
+                        value="customer_login"
+                      />
+                      <input name="utf8" type="hidden" value="✓" />
+
+                      <h2 class="page_title font-weight-bold mb-4 text-center">
+                        Đăng nhập
+                      </h2>
+
+                      <div class="form-group mb-3">
+                        <label
+                          for="customer_email"
+                          class="font-weight-bold small"
+                          >Email <span class="text-danger">*</span></label
+                        >
+                        <input
+                          type="email"
+                          placeholder="Nhập địa chỉ email"
+                          class="form-control mew-control rounded-10 py-2 px-3"
+                          name="customer[email]"
+                          id="customer_email"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group mb-3">
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-1"
+                        >
+                          <label
+                            for="customer_password"
+                            class="font-weight-bold small m-0"
+                            >Mật khẩu <span class="text-danger">*</span></label
+                          >
+                          <a
+                            href="#recover"
+                            class="small text-muted"
+                            onclick="
+                              toggleRecoverPasswordForm();
+                              return false;
+                            "
+                            id="RecoverPassword"
+                          >
+                            Quên mật khẩu?
+                          </a>
+                        </div>
+                        <input
+                          type="password"
+                          placeholder="Nhập mật khẩu"
+                          class="form-control mew-control rounded-10 py-2 px-3"
+                          name="customer[password]"
+                          id="customer_password"
+                          required
+                        />
+                      </div>
+
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn_login font-weight-bold rounded-10 w-100 py-3 mt-2"
+                      >
+                        Đăng nhập
+                      </button>
+
+                      <!-- BỔ SUNG: ĐĂNG NHẬP BẰNG MẠNG XÃ HỘI (HARAVAN / SHOPIFY APPS) -->
+                      <div class="social-login-wrapper text-center my-4">
+                        <div class="position-relative mb-3">
+                          <hr class="m-0" />
+                          <span
+                            class="position-absolute bg-white px-3 small text-muted translate-middle-y"
+                            style="
+                              top: -10px;
+                              left: 50%;
+                              transform: translateX(-50%);
+                            "
+                          >
+                            Hoặc đăng nhập với
+                          </span>
+                        </div>
+                        <div class="d-flex gap-2 justify-content-center">
+                          <a
+                            href="/account/facebook_login"
+                            class="btn btn-outline-primary rounded-10 px-3 py-2 d-flex align-items-center gap-2"
+                          >
+                            <svg
+                              width="18"
+                              height="18"
+                              fill="currentColor"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                              />
+                            </svg>
+                            Facebook
+                          </a>
+                          <a
+                            href="/account/google_login"
+                            class="btn btn-outline-danger rounded-10 px-3 py-2 d-flex align-items-center gap-2"
+                          >
+                            <svg
+                              width="18"
+                              height="18"
+                              fill="currentColor"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0c2.24 0 4.148.81 5.611 2.148l-2.23 2.23C10.45 3.42 9.358 3.05 8 3.05c-2.738 0-4.965 2.227-4.965 4.95S5.262 12.95 8 12.95c2.47 0 4.15-1.42 4.49-3.34H8V6.558h7.545z"
+                              />
+                            </svg>
+                            Google
+                          </a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <!-- FORM QUÊN MẬT KHẨU (MẶC ĐỊNH ẨN) -->
+                  <div id="recover_password" class="d-none">
+                    <form
+                      accept-charset="UTF-8"
+                      action="/account/recover"
+                      method="post"
+                    >
+                      <input
+                        name="form_type"
+                        type="hidden"
+                        value="recover_customer_password"
+                      />
+                      <input name="utf8" type="hidden" value="✓" />
+
+                      <h3 class="font-weight-bold mb-2 text-center">
+                        Đặt lại mật khẩu
+                      </h3>
+                      <p class="text-center small text-muted mb-4">
+                        Chúng tôi sẽ gửi cho bạn một email hướng dẫn để khôi
+                        phục mật khẩu.
+                      </p>
+
+                      <div class="form-error mb-3 text-danger small"></div>
+
+                      <div class="form-group mb-3">
+                        <label
+                          for="recover_email"
+                          class="font-weight-bold small"
+                          >Email tài khoản
+                          <span class="text-danger">*</span></label
+                        >
+                        <input
+                          type="email"
+                          class="form-control mew-control rounded-10 py-2 px-3"
+                          placeholder="Nhập email của bạn"
+                          name="email"
+                          id="recover_email"
+                          required
+                        />
+                      </div>
+
+                      <div class="d-flex gap-2">
+                        <button
+                          type="submit"
+                          class="btn btn-primary font-weight-bold rounded-10 w-100 py-2"
+                        >
+                          Gửi yêu cầu
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-light font-weight-bold rounded-10 w-50 py-2"
+                          onclick="
+                            toggleRecoverPasswordForm();
+                            return false;
+                          "
+                        >
+                          Hủy
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BẢNG ĐĂNG KÝ MỚI -->
+              <div class="new-users text-center mt-4">
+                <p class="text-muted small mb-2">Bạn chưa có tài khoản?</p>
+                <a
+                  href="/register"
+                  class="btn btn-outline-primary font-weight-bold rounded-10 py-2 px-4"
+                >
+                  Tạo tài khoản mới
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div id="footer-placeholder"></div>
+    </footer>
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script>
+      function toggleRecoverPasswordForm() {
+        var loginForm = document.getElementById("customer_login_form");
+        var recoverForm = document.getElementById("recover_password");
+
+        // Kiểm tra sự tồn tại của 2 element trước khi switch class
+        if (loginForm && recoverForm) {
+          loginForm.classList.toggle("d-none");
+          recoverForm.classList.toggle("d-none");
+        }
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/product.js"></script>
+  </body>
+</html>
