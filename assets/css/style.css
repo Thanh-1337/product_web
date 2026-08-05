@@ -13,13 +13,13 @@
   --accent-color: #ff5722;
   --accent-hover: #e64a19;
   --accent-gradient: linear-gradient(135deg, #ff5722 0%, #ff7043 100%);
-  
+
   --bg-color: #f8fafc;
   --card-bg: #ffffff;
   --dark-bg: #0f172a;
   --dark-card-bg: #1e293b;
   --dark-surface: #1e2229;
-  
+
   --text-main: #0f172a;
   --text-muted: #64748b;
   --text-light: #94a3b8;
@@ -28,8 +28,12 @@
 
   --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
   --shadow-sm: 0 4px 12px rgba(148, 163, 184, 0.08);
-  --shadow-md: 0 10px 25px -5px rgba(99, 102, 241, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 20px 35px -10px rgba(99, 102, 241, 0.18), 0 10px 15px -5px rgba(0, 0, 0, 0.04);
+  --shadow-md:
+    0 10px 25px -5px rgba(99, 102, 241, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-lg:
+    0 20px 35px -10px rgba(99, 102, 241, 0.18),
+    0 10px 15px -5px rgba(0, 0, 0, 0.04);
   --shadow-glow: 0 0 25px rgba(99, 102, 241, 0.35);
 
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
@@ -226,7 +230,11 @@ nav.navbar {
    HERO CAROUSEL SECTION
    ========================================================================== */
 .hero-carousel-section {
-  background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(99, 102, 241, 0.08) 0%,
+    transparent 70%
+  );
 }
 
 #techStoreCarousel {
@@ -332,7 +340,11 @@ nav.navbar {
   left: 0;
   width: 48px;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   border-radius: 99px;
 }
 
@@ -568,7 +580,8 @@ footer {
   border-top: 1px solid #1e293b;
 }
 
-footer h3, footer h5 {
+footer h3,
+footer h5 {
   letter-spacing: -0.3px;
 }
 
