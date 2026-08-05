@@ -313,7 +313,7 @@ function renderDropdown(products) {
   dropdownMenu.appendChild(header);
   products.slice(0, 4).forEach((product) => {
     const dropdown = document.createElement("li");
-    dropdown.innerHTML = ` <a class="dropdown-item d-flex align-items-center justify-content-between py-2 px-3 fw-medium" href="#">
+    dropdown.innerHTML = ` <a class="dropdown-item d-flex align-items-center justify-content-between py-2 px-3 fw-medium" href="/product/${product.id}">
         <span class="pe-2">
           <i class="fa-solid fa-angle-right me-2 text-primary fs-8"></i>
           ${product.name}

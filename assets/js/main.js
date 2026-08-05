@@ -60,9 +60,10 @@ function checkUserLogin() {
           // Hiển thị Avatar (Google) hoặc Icon Mặc định + Tên
           const userAvatar = user.avatar
             ? `<img src="${user.avatar}" style="width: 26px; height: 26px; border-radius: 50%; object-fit: cover; vertical-align: middle; margin-right: 5px;" />`
-            : `<i class="fa-solid fa-user me-4"></i>`;
+            : `<i class="fa-solid fa-user "></i>`;
 
-          link.innerHTML = `${userAvatar} <span class="d-none d-md-inline">${user.name || "Tài khoản"}</span>`;
+          link.innerHTML = `${userAvatar}`;
+          // <span class="d-none d-md-inline">${user.name || "Tài khoản"}</span>
           link.setAttribute("href", "javascript:void(0)");
 
           // Xóa dropdown cũ nếu trùng
@@ -72,19 +73,6 @@ function checkUserLogin() {
           // Tạo Menu Dropdown Đăng xuất
           const dropdownMenu = document.createElement("div");
           dropdownMenu.className = "user-dropdown-menu shadow-sm border";
-          dropdownMenu.style.cssText = `
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #ffffff;
-  min-width: 170px;
-  border-radius: 8px;
-  padding: 6px 0;
-  z-index: 9999; /* 👈 Sửa hoặc thêm dòng này lên 9999 */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-`;
-
           dropdownMenu.innerHTML = `
             <div style="padding: 8px 14px; border-bottom: 1px solid #f1f1f1; font-weight: 600; font-size: 13px; color: #333;">
               <small class="text-muted d-block" style="font-size: 10px;">Đã đăng nhập</small>

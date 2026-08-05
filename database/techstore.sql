@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2026 at 09:17 PM
+-- Generation Time: Aug 05, 2026 at 09:40 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -78,7 +78,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `google_id`, `avatar`, `
 (1, 'Nguyễn Thanh', 'nguyenthanh22102007@gmail.com', NULL, '100540115647728932432', 'https://lh3.googleusercontent.com/a/ACg8ocKfsrwALftpm6arPei1o9NUgNBkdtLNXoSJybPdx4UokhfcMA=s96-c', 'user', '2026-08-04 21:45:52'),
 (2, 'Minh', 'leminhthai4627@gmail.com', 'Thaidzvll', NULL, NULL, 'user', '2026-08-04 22:06:21'),
 (3, 'Code', 'thanhcode@gmail.com', 'KD29dAaeU', NULL, NULL, 'admin', '2026-08-04 22:51:19'),
-(4, 'Hiếu', 'Hieucode@gmail.com', 'mFnKB41l7n', NULL, NULL, 'user', '2026-08-05 19:16:23');
+(4, 'Hiếu', 'Hieucode@gmail.com', 'mFnKB41l7n', NULL, NULL, 'admin', '2026-08-05 19:16:23');
 
 --
 -- Indexes for dumped tables

@@ -107,7 +107,17 @@ passport.use(
 // 1. API kiểm tra trạng thái đăng nhập
 router.get("/api/current_user", (req, res) => {
   if (req.isAuthenticated && req.isAuthenticated()) {
-    res.json({ loggedIn: true, user: req.user });
+    const user = { ...req.user };
+
+    // Nếu user chưa có avatar (đăng nhập thường)
+    if (!user.avatar) {
+      // Lấy tên người dùng (VD: "Nguyen Thanh" -> "Nguyen+Thanh")
+      const formattedName = encodeURIComponent(user.name || "User");
+      // Dịch vụ tạo ảnh Avatar theo chữ cái đầu (Nền màu xám/xanh, chữ trắng)
+      user.avatar = `https://ui-avatars.com/api/?name=${formattedName}&background=0D6EFD&color=fff&bold=true`;
+    }
+
+    res.json({ loggedIn: true, user: user });
   } else {
     res.json({ loggedIn: false });
   }
@@ -280,7 +290,25 @@ router.get("/account/login", (req, res) => {
 });
 
 router.use(express.static(rootDir));
-
+// ==========================================
+// ROUTE XEM CHI TIẾT SẢN PHẨM (Dùng Route Params)
+// ==========================================
+router.get("/product/:id", (req, res) => {
+  res.sendFile(path.join(rootDir, "product-detail.html"));
+});
+//API Lấy chi tiết 1 sản phẩm theo id
+router.get("/api/product/:id", (req, res) => {
+  const productId = req.params.id;
+  const sql = "select *from products where id=?";
+  db.query(sql, [productId], (err, results) => {
+    if (err || results.length === 0) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Không tìm thấy sản phẩm" });
+    }
+    res.json({ success: true, product: results[0] });
+  });
+});
 router.get("/:page", (req, res) => {
   const page = req.params.page;
 

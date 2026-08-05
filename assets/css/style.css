@@ -94,6 +94,8 @@ body {
 }
 
 header.bg-white {
+  position: relative;
+  z-index: 1040;
   background: rgba(255, 255, 255, 0.92) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -189,6 +191,7 @@ header h1 a:hover {
 nav.navbar {
   background-color: #0f172a !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
 }
 
 .navbar-nav .nav-link {
@@ -606,4 +609,16 @@ footer a.hover-white {
 footer a.hover-white:hover {
   color: #ffffff !important;
   padding-left: 4px;
+}
+.user-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 170px;
+  border-radius: 8px;
+  padding: 6px 0;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
